@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Com Amor de Deus</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: #fdf6f0;
+      color: #333;
+      text-align: center;
+      padding: 40px 20px;
+      margin: 0;
+    }
+
+    h1 {
+      color: #b35656;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .verse {
+      font-style: italic;
+      color: #b35656;
+      margin-top: 30px;
+      min-height: 100px;
+      font-size: 1.3em;
+      background: #fff7f2;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: opacity 0.5s ease-in-out;
+      line-height: 1.6;
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #888;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .verse {
+        font-size: 1.1em;
+        padding: 16px;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Com Amor de Deus</h1>
+
+  <div class="verse" id="verse"></div>
+
+  <p>
+    Hoje, no Dia dos Namorados, quero te lembrar que o nosso amor é um presente do Senhor.  
+    Oro todos os dias para que Ele nos guie, nos ensine e fortaleça nosso vínculo com paciência, carinho e fé.
+  </p>
+
+  <p>
+    Te amo com um amor que vem do céu 💖
+  </p>
+
+  <!-- Música de fundo -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/08/audio_f2c596c244.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <div class="footer">
+    Feito com carinho e fé ✨
+  </div>
+
+  <script>
+    const verses = [
+      "“O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha.” – 1 Coríntios 13:4",
+      "“Acima de tudo, porém, revistam-se do amor, que é o elo perfeito.” – Colossenses 3:14",
+      "“Nós amamos porque Ele nos amou primeiro.” – 1 João 4:19",
+      "“Façam tudo com amor.” – 1 Coríntios 16:14",
+      "“Que o Senhor conduza os seus corações ao amor de Deus.” – 2 Tessalonicenses 3:5",
+      "“O amor cobre uma multidão de pecados.” – 1 Pedro 4:8",
+      "“Este é o meu mandamento: Amem-se uns aos outros como eu os amei.” – João 15:12"
+    ];
+
+    let index = 0;
+    const verseEl = document.getElementById("verse");
+
+    function showVerse() {
+      verseEl.style.opacity = 0;
+      setTimeout(() => {
+        verseEl.innerHTML = verses[index];
+        verseEl.style.opacity = 1;
+        index = (index + 1) % verses.length;
+      }, 500);
+    }
+
+    showVerse();
+    setInterval(showVerse, 5000);
+  </script>
+</body>
+</html>
